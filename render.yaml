@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: aseel-whatsapp-smart-bot
+    runtime: node
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: AI_PROVIDER
+        value: gemini
+      - key: AI_MODEL
+        value: gpt-4o-mini
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: GRAPH_API_VERSION
+        value: v23.0
